@@ -11,7 +11,7 @@
             "port": 3307,
             "driver": "MySQL",
             "name": "Abarrotes",
-            "username": "backend",
+            "username": "root",
             "database": "abarrotes_db"
         }
     ]

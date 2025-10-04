@@ -1,0 +1,45 @@
+<div class="container mt-4">
+  <h2>✏️ Editar Producto</h2>
+  <form (ngSubmit)="guardar()">
+    <div class="mb-3">
+      <label class="form-label">Código de barras</label>
+      <input class="form-control" [(ngModel)]="producto.codigo_barra" name="codigo_barra" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Nombre</label>
+      <input class="form-control" [(ngModel)]="producto.nombre" name="nombre" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Descripción</label>
+      <textarea class="form-control" [(ngModel)]="producto.descripcion" name="descripcion"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Precio</label>
+      <input type="number" class="form-control" [(ngModel)]="producto.precio" name="precio" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Stock</label>
+      <input type="number" class="form-control" [(ngModel)]="producto.stock" name="stock">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Fecha de caducidad</label>
+      <input type="date" class="form-control" [(ngModel)]="producto.fecha_caducidad" name="fecha_caducidad">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Imagen (URL)</label>
+      <input type="text" class="form-control" [(ngModel)]="producto.imagen" name="imagen">
+    </div>
+
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a routerLink="/productos" class="btn btn-secondary ms-2">Cancelar</a>
+    <button type="button" class="btn btn-danger ms-2" (click)="eliminar()">Eliminar</button>
+  </form>
+</div>
+
+
